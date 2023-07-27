@@ -21,7 +21,7 @@ if ($replicavms.Length -eq 0)
 			else
 			{
 			$stringfrombrokenreplica = $brokenreplica | Out-String
-				if ($stringfrombrokenreplica -Contains "Critical")
+				if($stringfrombrokenreplica.Contains("Critical"))
 				{
 				$exitcode = "2"
 				}
